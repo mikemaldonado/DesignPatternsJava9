@@ -1,3 +1,4 @@
+//Author: Mike Maldonado
 package com.premaseem.prototypePattern;
 
 import com.premaseem.prototypePattern.Molecule.MoleculePrototype;

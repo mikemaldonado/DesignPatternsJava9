@@ -1,8 +1,8 @@
 package com.premaseem.prototypePattern;
 
-import java.util.Scanner;
-
 import com.premaseem.prototypePattern.Cell.CellProtoTypes;
+
+import java.util.Scanner;
 
 public class ClientFile {
 
