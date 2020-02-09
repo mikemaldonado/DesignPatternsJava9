@@ -14,19 +14,17 @@ public class Architect {
 
     private HouseBuilder houseBuilder;
 
-    public void setHouseBuilder (HouseBuilder houseBuilder) {
-        this.houseBuilder = houseBuilder;
-    }
+    public Architect(final HouseBuilder houseBuilder) { this.houseBuilder = houseBuilder; }
 
-    public void buildHouse() {
-        houseBuilder.addRooms();
-        houseBuilder.addPlumbingSystem();
-        houseBuilder.addAirConditionerSystem();
-        houseBuilder.addSecuritySystem();
-        houseBuilder.paintHouse("white");
+    public void construct() {
+        houseBuilder.addRooms()
+        .addPlumbingSystem()
+        .addAirConditionerSystem()
+        .addSecuritySystem()
+        .paintHouse("white");
     }
 
     public House getFinishedHouse(){
-        return houseBuilder.getHouse();
+        return houseBuilder.build();
     }
 }

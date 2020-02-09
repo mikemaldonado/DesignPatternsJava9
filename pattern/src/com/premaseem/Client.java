@@ -2,7 +2,6 @@ package com.premaseem;
 
 import com.premaseem.builder.House;
 import com.premaseem.builder.OneBedroomHouseBuilder;
-import com.premaseem.builder.TwoBedroomHouseBuilder;
 import com.premaseem.director.Architect;
 
 /*
@@ -13,11 +12,10 @@ import com.premaseem.director.Architect;
 public class Client {
     public static void main (String[] args) {
         System.out.println("Builder Design pattern example ");
-        Architect architect = new Architect();
+        Architect architect = new Architect(new OneBedroomHouseBuilder());
 
         // Hiding complexity and building one bed room house
-        architect.setHouseBuilder(new OneBedroomHouseBuilder());
-        architect.buildHouse();
+        architect.construct();
         House house = architect.getFinishedHouse();
         System.out.println(house);
 

@@ -1,7 +1,8 @@
 package com.premaseem.builder;
 
-import com.premaseem.room.BathRoom;
-import com.premaseem.room.BedRoom;
+import com.premaseem.director.RoomDirector;
+import com.premaseem.room.BathRoomBuilder;
+import com.premaseem.room.BedRoomBuilder;
 import com.premaseem.room.LivingRoom;
 
 /*
@@ -14,9 +15,12 @@ import com.premaseem.room.LivingRoom;
 public class OneBedroomHouseBuilder extends HouseBuilder{
 
     @Override
-    public void addRooms () {
-        getHouse().rooms.add(new BathRoom());
-        getHouse().rooms.add(new BedRoom());
-        getHouse().rooms.add(new LivingRoom());
+    public HouseBuilder addRooms () {
+        RoomDirector roomDirector = new RoomDirector(new BathRoomBuilder());
+        house.rooms.add(roomDirector.construct());
+        roomDirector.setRoomBuilder(new BedRoomBuilder());
+        house.rooms.add(roomDirector.construct());
+        house.rooms.add(new LivingRoom());
+        return this;
     }
 }

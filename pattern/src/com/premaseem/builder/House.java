@@ -13,7 +13,10 @@ import java.util.List;
 /* "Product" */
 public class House {
     List<Room> rooms = new ArrayList<>();
-    private String exteriorColor = "while";
+    private String exteriorColor = "white";
+    boolean securitySystem = false;
+    private String airConditioningSystem;
+    private String plumbingSystem;
 
     public String getExteriorColor () {
         return exteriorColor;
@@ -28,5 +31,21 @@ public class House {
         System.out.println("house has total rooms " + rooms.size());
         System.out.println("house has color " + getExteriorColor());
         return "";
+    }
+
+    public String getAirConditioningSystem() {
+        return airConditioningSystem;
+    }
+
+    public void setAirConditioningSystem(String airConditioningSystem) {
+        this.airConditioningSystem = airConditioningSystem;
+    }
+
+    public String getPlumbingSystem() {
+        return plumbingSystem;
+    }
+
+    public void setPlumbingSystem(String plumbingSystem) {
+        this.plumbingSystem = plumbingSystem;
     }
 }

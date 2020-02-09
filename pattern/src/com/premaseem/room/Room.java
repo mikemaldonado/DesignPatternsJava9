@@ -9,7 +9,7 @@ public class Room {
 
      private Integer numberOfWindows = 1;
      private Integer numberOfWalls = 4;
-
+     private String floorType;
 
     public Integer getNumberOfWindows () {
         return numberOfWindows;
@@ -26,5 +26,14 @@ public class Room {
     public void setNumberOfWalls (Integer numberOfWalls) {
         this.numberOfWalls = numberOfWalls;
     }
+
+    public String getFloorType() {
+        return floorType;
+    }
+
+    public void setFloorType(String floorType) {
+        this.floorType = floorType;
+    }
+
 }
 
